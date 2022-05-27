@@ -1,0 +1,14 @@
+---
+
+- name: bookfisrt play
+  hosts: java-servers
+  tasks:
+  - name: copy a file
+    copy:
+      src: /etc/ansible/hosts 
+      dest: /root/test/hosts
+  - name: install apache
+    yum:
+      name: httpd
+      state: absent
+
